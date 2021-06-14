@@ -61,8 +61,6 @@ const s = StyleSheet.create({
     color: 'black',
   },
 })
-
-/* eslint react/prop-types: 0 */ // https://github.com/yannickcr/eslint-plugin-react/issues/106
 export default class LiteCreditCardInput extends Component<any> {
   static propTypes = {
     ...InjectedProps,
@@ -158,6 +156,7 @@ export default class LiteCreditCardInput extends Component<any> {
 
     const showRightPart = focused && focused !== 'number'
     const myIcons: any = Icons
+
     return (
       <View style={s.container}>
         <View style={[s.leftPart, showRightPart ? s.hidden : s.expanded]}>

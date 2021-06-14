@@ -60,7 +60,9 @@ export default class CCInput extends Component<any> {
 
   focus() {
     const refs: any = this.refs
-    refs.input.focus()
+    if (refs && refs.input) {
+      refs.input.focus()
+    }
   }
 
   _onFocus = () => this.props.onFocus(this.props.field)

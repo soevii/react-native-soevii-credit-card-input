@@ -13,6 +13,7 @@ import {
 import CreditCard from './CardView/CardView'
 import CCInput from './CCInput'
 import { InjectedProps } from './connectToState'
+import { ICreditCardInputs, IInputPlaceholders } from './types'
 
 const s = StyleSheet.create({
   container: {
@@ -42,7 +43,7 @@ const PREVIOUS_FIELD_OFFSET = 40
 const POSTAL_CODE_INPUT_WIDTH = 120
 
 /* eslint react/prop-types: 0 */ // https://github.com/yannickcr/eslint-plugin-react/issues/106
-export default class CreditCardInput extends Component<any> {
+export default class CreditCardInput extends Component<ICreditCardInputs> {
   static propTypes = {
     ...InjectedProps,
     labels: PropTypes.object,
@@ -138,7 +139,7 @@ export default class CreditCardInput extends Component<any> {
       additionalInputsProps,
     } = this.props
 
-    return {
+    const result: IInputPlaceholders = {
       inputStyle: [s.input, inputStyle],
       labelStyle: [s.inputLabel, labelStyle],
       validColor,
@@ -159,6 +160,8 @@ export default class CreditCardInput extends Component<any> {
 
       additionalInputProps: additionalInputsProps[field],
     }
+
+    return result
   }
 
   render() {

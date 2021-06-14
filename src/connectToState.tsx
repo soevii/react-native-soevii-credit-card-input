@@ -94,10 +94,17 @@ function connectToState(CreditCardInput: any): any {
     }
 
     _focusPreviousField = (field: any) => {
+      const { requiresName } = this.props
+      if (field === 'name') {
+        return
+      }
       const displayedFields = this._displayedFields()
       const fieldIndex = displayedFields.indexOf(field)
       const previousField = displayedFields[fieldIndex - 1]
       if (previousField) this.focus(previousField)
+      if (requiresName && fieldIndex === 0) {
+        this.focus('name')
+      }
     }
 
     _focusNextField = (field: any) => {
