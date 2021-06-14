@@ -32,13 +32,13 @@ Code:
 # Usage
 
 ```bash
-yarn add react-native-input-credit-card
+yarn add @soevii/react-native-card-input
 ```
 
 then add these lines in your react-native codebase
 
 ```js
-import { CreditCardInput, LiteCreditCardInput } from "react-native-input-credit-card";
+import { CreditCardInput, LiteCreditCardInput } from "@soevii/react-native-card-input";
 
 <CreditCardInput onChange={this._onChange} />
 // or

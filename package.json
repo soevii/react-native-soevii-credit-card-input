@@ -1,8 +1,8 @@
 {
   "name": "@soevii/react-native-card-input",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
-  "homepage": "https://github.com/demchenkoalex/react-native-card-input-soevii#readme",
+  "homepage": "https://github.com/soevii/react-native-soevii-credit-card-input#readme",
   "main": "src/index.ts",
   "types": "src/types/index.ts",
   "author": "Soevii <admin@soevii.mx>",
