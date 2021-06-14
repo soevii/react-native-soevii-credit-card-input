@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
-import { Counter } from 'react-native-card-input-soevii'
+import { View } from 'react-native'
+import { CreditCardInput } from 'react-native-card-input-soevii'
 
 const App = () => {
   useEffect(() => {
     console.log('')
   })
 
-  return <Counter />
+  return <CreditCardInput />
 }
 
 export default App

@@ -11,6 +11,7 @@
     "sourceMap": true,
     "strict": true,
     "target": "ESNext",
+    "typeRoots": ["node_modules/@types", "src/types"]
   },
   "exclude": ["**/__tests__/*"],
   "include": ["src"]
